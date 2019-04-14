@@ -1,6 +1,6 @@
 # Scroller
 
-A scroller control for iOS:
+A draggable scroller control for iOS:
 
 ![](Screenshots/scrollerMain.gif)
 

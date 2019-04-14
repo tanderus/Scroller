@@ -3,9 +3,4 @@ use_frameworks!
 target 'Scroller_Example' do
   pod 'Scroller', :path => '../'
 
-  target 'Scroller_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

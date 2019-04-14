@@ -1,0 +1,16 @@
+PODS:
+  - Scroller (0.1.0)
+
+DEPENDENCIES:
+  - Scroller (from `../`)
+
+EXTERNAL SOURCES:
+  Scroller:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Scroller: 84701c57be04277acb9f2824937480c0203115ca
+
+PODFILE CHECKSUM: 0302dfb2f1d7b38ef7e5dd0ebc669fe0ca2b186b
+
+COCOAPODS: 1.6.1

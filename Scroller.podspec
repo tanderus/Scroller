@@ -9,34 +9,15 @@
 Pod::Spec.new do |s|
   s.name             = 'Scroller'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of Scroller.'
+  s.summary          = 'A scroller-like control for iOS'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/6lackk@gmail.com/Scroller'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/tanderus/Scroller'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '6lackk@gmail.com' => '6lackk@gmail.com' }
-  s.source           = { :git => 'https://github.com/6lackk@gmail.com/Scroller.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'tanderus' => '6lackk@gmail.com' }
+  s.source           = { :git => 'https://github.com/tanderus/Scroller.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'Scroller/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'Scroller' => ['Scroller/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.swift_version = '4.2'
+  s.ios.deployment_target = '10.0'
+  s.source_files = 'Scroller/**/*'
+  s.frameworks = 'UIKit'
 end

@@ -1,0 +1,23 @@
+{
+  "name": "Scroller",
+  "version": "0.1.0",
+  "summary": "A scroller-like control for iOS",
+  "homepage": "https://github.com/tanderus/Scroller",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "tanderus": "6lackk@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/tanderus/Scroller.git",
+    "tag": "0.1.0"
+  },
+  "swift_version": "4.2",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "Scroller/**/*",
+  "frameworks": "UIKit"
+}

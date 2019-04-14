@@ -7,8 +7,16 @@
 //
 
 import UIKit
+import Scroller
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet private weak var scroller: Scroller!
+    @IBOutlet private weak var valueLabel: UILabel!
+    
+    @IBAction private func scrollerValueChanged() {
+        let value = scroller.currentValue
+        self.valueLabel.text = "Value: \(Int(value))"
+    }
 }
 

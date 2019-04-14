@@ -21,27 +21,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwW-p4-jSb" customClass="Scroller" customModule="Scroller">
-                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVu-xc-bEG" customClass="Scroller" customModule="Scroller">
+                                <rect key="frame" x="37.5" y="133.5" width="300" height="400"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="KwW-by-JBG"/>
-                                    <constraint firstAttribute="height" constant="300" id="lLw-88-cOD"/>
+                                    <constraint firstAttribute="width" constant="300" id="Qzo-7U-AW9"/>
+                                    <constraint firstAttribute="height" constant="400" id="R7q-IX-jzJ"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldDrawBall" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="currentValue">
-                                        <real key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="scrollerValueChanged" destination="vXZ-lx-hvc" eventType="valueChanged" id="tkJ-rZ-Jh4"/>
+                                </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value: 50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lj6-Kj-tO2">
+                                <rect key="frame" x="149.5" y="323" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.098039215690000001" green="0.10980392160000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NwW-p4-jSb" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="pgL-aD-MIr"/>
-                            <constraint firstItem="NwW-p4-jSb" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="tB3-Mk-2np"/>
+                            <constraint firstItem="lj6-Kj-tO2" firstAttribute="centerY" secondItem="XVu-xc-bEG" secondAttribute="centerY" id="YVM-Mw-9be"/>
+                            <constraint firstItem="XVu-xc-bEG" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="aAW-No-2rC"/>
+                            <constraint firstItem="XVu-xc-bEG" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="qWG-F6-tqZ"/>
+                            <constraint firstItem="lj6-Kj-tO2" firstAttribute="centerX" secondItem="XVu-xc-bEG" secondAttribute="centerX" id="xv7-rW-HO9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scroller" destination="XVu-xc-bEG" id="uBH-NM-m4Z"/>
+                        <outlet property="valueLabel" destination="lj6-Kj-tO2" id="k0h-2K-deL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

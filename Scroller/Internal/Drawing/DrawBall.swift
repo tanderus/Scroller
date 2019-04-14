@@ -16,17 +16,7 @@ extension Scroller {
         let cX = innerCircleRect.midX
         let cY = innerCircleRect.midY
         
-        var scrollerCenterY = innerCircleRect.maxY
-        scrollerCenterY += self.circleToRingSpacing
-        scrollerCenterY += 0.5 * self.ringWidth
-        
-        let scrollerRect = CGRect(
-            x: cX - 0.5 * self.ballDiameter
-            , y: scrollerCenterY - 0.5 * self.ballDiameter
-            , width: self.ballDiameter
-            , height: self.ballDiameter
-        )
-        
+        let ballRect = self.ballRectNotRotated
         let angleRadians = currentAngle * .pi / 180
         
         context?.saveGState()
@@ -34,11 +24,27 @@ extension Scroller {
         context?.rotate(by: angleRadians)
         context?.translateBy(x: -cX, y: -cY)
         context?.setFillColor(self.ballFill.cgColor)
-        context?.fillEllipse(in: scrollerRect)
+        context?.fillEllipse(in: ballRect)
         
         context?.setStrokeColor(self.ballStroke.cgColor)
         context?.setLineWidth(self.ballStrokeWidth)
-        context?.strokeEllipse(in: scrollerRect)
+        context?.strokeEllipse(in: ballRect)
         context?.restoreGState()
+    }
+    
+    var ballRectNotRotated: CGRect {
+        let innerCircleRect = self.innerCircleRect
+        let cX = innerCircleRect.midX
+        
+        var ballCenterY = innerCircleRect.maxY
+        ballCenterY += self.circleToRingSpacing
+        ballCenterY += 0.5 * self.ringWidth
+        
+        return CGRect(
+            x: cX - 0.5 * self.ballDiameter
+            , y: ballCenterY - 0.5 * self.ballDiameter
+            , width: self.ballDiameter
+            , height: self.ballDiameter
+        )
     }
 }

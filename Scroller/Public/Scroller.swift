@@ -12,7 +12,7 @@ open class Scroller: UIControl {
     
     // MARK: -
     // MARK: Inner circle properties
-    @IBInspectable var circleFill: UIColor = UIColor.white {
+    @IBInspectable public var circleFill: UIColor = UIColor.white {
         didSet {
             guard circleFill != oldValue else { return }
             
@@ -20,7 +20,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var circleStroke: UIColor = UIColor.white {
+    @IBInspectable public var circleStroke: UIColor = UIColor.white {
         didSet {
             guard circleStroke != oldValue else { return }
             
@@ -28,7 +28,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var circleStrokeWidth: CGFloat = 0 {
+    @IBInspectable public var circleStrokeWidth: CGFloat = 0 {
         didSet {
             let newVal = max(0, circleStrokeWidth)
             guard newVal != oldValue else { return }
@@ -40,7 +40,7 @@ open class Scroller: UIControl {
     
     // MARK: -
     // MARK: Minimum value properties
-    @IBInspectable var minimumValue: CGFloat = 0 {
+    @IBInspectable public var minimumValue: CGFloat = 0 {
         didSet {
             let newVal = min(minimumValue, maximumValue)
             if newVal != oldValue {
@@ -49,7 +49,7 @@ open class Scroller: UIControl {
             }
         }
     }
-    @IBInspectable var minimumAngle: CGFloat = 45 {
+    @IBInspectable public var minimumAngle: CGFloat = 45 {
         didSet {
             var newVal = min(359, max(0, minimumAngle))
             newVal = min(minimumAngle, maximumAngle)
@@ -60,7 +60,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var minimumTickColor: UIColor = UIColor.white {
+    @IBInspectable public var minimumTickColor: UIColor = UIColor.white {
         didSet {
             guard minimumTickColor != oldValue else { return }
             
@@ -68,7 +68,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var minimumTickWidth: CGFloat = 2 {
+    @IBInspectable public var minimumTickWidth: CGFloat = 2 {
         didSet {
             guard minimumTickWidth != oldValue else { return }
             
@@ -77,7 +77,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var minimumTextColor: UIColor = UIColor.white {
+    @IBInspectable public var minimumTextColor: UIColor = UIColor.white {
         didSet {
             guard minimumTextColor != oldValue else { return }
             
@@ -85,7 +85,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var minimumFont: UIFont = UIFont.systemFont(ofSize: 14) {
+    @IBInspectable public var minimumFont: UIFont = UIFont.systemFont(ofSize: 14) {
         didSet {
             guard minimumFont != oldValue else { return }
             
@@ -95,7 +95,7 @@ open class Scroller: UIControl {
     
     // MARK: -
     // MARK: Maximum value properties
-    @IBInspectable var maximumValue: CGFloat = 100 {
+    @IBInspectable public var maximumValue: CGFloat = 100 {
         didSet {
             let newVal = max(minimumValue, maximumValue)
             if newVal != oldValue {
@@ -104,7 +104,7 @@ open class Scroller: UIControl {
             }
         }
     }
-    @IBInspectable var maximumAngle: CGFloat = 315 {
+    @IBInspectable public var maximumAngle: CGFloat = 315 {
         didSet {
             var newVal = min(359, max(0, maximumAngle))
             newVal = max(minimumAngle, maximumAngle)
@@ -115,7 +115,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var maximumTickColor: UIColor = UIColor.white {
+    @IBInspectable public var maximumTickColor: UIColor = UIColor.white {
         didSet {
             guard maximumTickColor != oldValue else { return }
             
@@ -123,7 +123,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var maximumTickWidth: CGFloat = 2 {
+    @IBInspectable public var maximumTickWidth: CGFloat = 2 {
         didSet {
             guard maximumTickWidth != oldValue else { return }
             
@@ -132,7 +132,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var maximumTextColor: UIColor = UIColor.white {
+    @IBInspectable public var maximumTextColor: UIColor = UIColor.white {
         didSet {
             guard maximumTextColor != oldValue else { return }
             
@@ -140,7 +140,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var maximumFont: UIFont = UIFont.systemFont(ofSize: 14) {
+    @IBInspectable public var maximumFont: UIFont = UIFont.systemFont(ofSize: 14) {
         didSet {
             guard maximumFont != oldValue else { return }
             
@@ -150,7 +150,7 @@ open class Scroller: UIControl {
     
     // MARK: -
     // MARK: Current value properties
-    @IBInspectable var currentValue: CGFloat = 50 {
+    @IBInspectable public var currentValue: CGFloat = 50 {
         didSet {
             guard currentValue != oldValue else { return }
             
@@ -171,7 +171,7 @@ open class Scroller: UIControl {
         return self.minimumAngle + part * (self.maximumAngle - self.minimumAngle)
     }
     
-    @IBInspectable var currentTickColor: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1) {
+    @IBInspectable public var currentTickColor: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1) {
         didSet {
             guard currentTickColor != oldValue else { return }
             
@@ -179,7 +179,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var currentTickWidth: CGFloat = 5 {
+    @IBInspectable public var currentTickWidth: CGFloat = 5 {
         didSet {
             guard currentTickWidth != oldValue else { return }
             
@@ -188,7 +188,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var currentTextColor: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1) {
+    @IBInspectable public var currentTextColor: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1) {
         didSet {
             guard currentTextColor != oldValue else { return }
             
@@ -196,7 +196,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var currentFont: UIFont = UIFont.systemFont(ofSize: 14) {
+    @IBInspectable public var currentFont: UIFont = UIFont.systemFont(ofSize: 14) {
         didSet {
             guard currentFont != oldValue else { return }
             
@@ -206,7 +206,7 @@ open class Scroller: UIControl {
     
     // MARK: -
     // MARK: Ball properties
-    @IBInspectable var shouldDrawBall: Bool = true {
+    @IBInspectable public var shouldDrawBall: Bool = true {
         didSet {
             guard shouldDrawBall != oldValue else { return }
             
@@ -214,7 +214,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var ballDiameter: CGFloat = 30 {
+    @IBInspectable public var ballDiameter: CGFloat = 30 {
         didSet {
             guard ballDiameter != oldValue else { return }
             
@@ -224,7 +224,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var ballFill: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1) {
+    @IBInspectable public var ballFill: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1) {
         didSet {
             guard ballFill != oldValue else { return }
             
@@ -232,7 +232,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var ballStroke: UIColor = UIColor.black {
+    @IBInspectable public var ballStroke: UIColor = UIColor.black {
         didSet {
             guard ballStroke != oldValue else { return }
             
@@ -240,7 +240,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var ballStrokeWidth: CGFloat = 2 {
+    @IBInspectable public var ballStrokeWidth: CGFloat = 2 {
         didSet {
             guard ballStrokeWidth != oldValue else { return }
             
@@ -250,7 +250,7 @@ open class Scroller: UIControl {
     
     // MARK: -
     // MARK: Ring properties
-    @IBInspectable var circleToRingSpacing: CGFloat = 2 {
+    @IBInspectable public var circleToRingSpacing: CGFloat = 2 {
         didSet {
             let newVal = max(0, circleToRingSpacing)
             if oldValue != newVal {
@@ -260,7 +260,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var ringColor: UIColor = UIColor(red: 122 / 255.0, green: 196 / 255.0, blue: 178 / 255.0, alpha: 0.2) {
+    @IBInspectable public var ringColor: UIColor = UIColor(red: 122 / 255.0, green: 196 / 255.0, blue: 178 / 255.0, alpha: 0.2) {
         didSet {
             guard ringColor != oldValue else { return }
             
@@ -268,7 +268,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var ringWidth: CGFloat = 20 {
+    @IBInspectable public var ringWidth: CGFloat = 20 {
         didSet {
             let newVal = max(1, ringWidth)
             if oldValue != newVal {
@@ -283,5 +283,86 @@ open class Scroller: UIControl {
     open override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         self.drawScroller(context)
+    }
+    
+    
+    // MARK: -
+    // MARK: Touches Processing
+    private var isDraggingBall = false
+    private var latestRingCenter = CGPoint.zero
+    
+    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        guard shouldDrawBall else { return }
+        
+        guard let touch = touches.first else { return }
+        
+        guard touch.view == self else { return }
+        
+        if self.isTouchWithinBall(touch)
+        {
+            self.isDraggingBall = true
+            self.latestRingCenter = self.ballCenter
+        }
+    }
+    
+    open override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        guard let touch = touches.first else { return }
+        
+        guard touch.view == self else { return }
+        
+        guard isDraggingBall else { return }
+        
+        guard let ringCenter = self.ringCenterCoordinates(for: touch) else { return }
+        
+        let ballCenter = self.ballCenter
+        if self.minimumValue == self.currentValue
+        {
+            // Trying to scroll right from the minimum value tick
+            if ballCenter.x < ringCenter.x { return }
+        }
+        else if self.maximumValue == self.currentValue
+        {
+            // Trying to scroll left from the maximum value tick
+            if ringCenter.x < ballCenter.x { return }
+        }
+        
+        let innerCircle = self.innerCircleRect
+        let chorde = distance(
+            aX: ringCenter.x
+            , bX: innerCircle.midX
+            , aY: ringCenter.y
+            , bY: innerCircle.maxY + self.circleToRingSpacing + 0.5 * self.ringWidth
+        )
+        
+        var resultAngle: CGFloat = 2 * asin( chorde / (2 * distanceFromCircleCenterToRingCenter) )
+        resultAngle = resultAngle * 180 / .pi
+        if innerCircle.midX < ringCenter.x
+        {
+            resultAngle = 360 - resultAngle
+        }
+        
+        resultAngle = max(self.minimumAngle, min(resultAngle, self.maximumAngle))
+        
+        var part = resultAngle - self.minimumAngle
+        part = part / (self.maximumAngle - self.minimumAngle)
+        let resultValue = self.minimumValue + part * (self.maximumValue - self.minimumValue)
+        if resultValue != self.currentValue
+        {
+            self.currentValue = resultValue
+            latestRingCenter = self.ballCenter
+            self.sendActions(for: .valueChanged)
+        }
+    }
+    
+    open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        self.isDraggingBall = false
+    }
+    
+    open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        self.isDraggingBall = false
     }
 }

@@ -281,6 +281,7 @@ open class Scroller: UIControl {
     
     // MARK: -
     open override func draw(_ rect: CGRect) {
+        super.draw(rect)
         let context = UIGraphicsGetCurrentContext()
         self.drawScroller(context)
     }

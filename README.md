@@ -134,7 +134,7 @@ If set to 'false', then the tick will be drawn instead and no dragging will be a
 
 
 
-Ring:
+##### Ring:
 
 - `public var circleToRingSpacing: CGFloat = 2`
 

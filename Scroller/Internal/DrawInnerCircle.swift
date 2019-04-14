@@ -39,6 +39,8 @@ extension Scroller {
         
         var inset = self.ringWidth
         inset += self.circleToRingSpacing
+        inset += self.extraTickHeight
+        inset += self.valueLabelSize
         return rect.insetBy(dx: inset, dy: inset)
     }
 }

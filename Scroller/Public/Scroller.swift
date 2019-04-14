@@ -49,7 +49,7 @@ open class Scroller: UIControl {
             }
         }
     }
-    @IBInspectable var minimumAngle: CGFloat = 15 {
+    @IBInspectable var minimumAngle: CGFloat = 45 {
         didSet {
             var newVal = min(359, max(0, minimumAngle))
             newVal = min(minimumAngle, maximumAngle)
@@ -57,6 +57,30 @@ open class Scroller: UIControl {
                 self.maximumAngle = newVal
                 self.setNeedsDisplay()
             }
+        }
+    }
+    
+    @IBInspectable var minimumTickColor: UIColor = UIColor.white {
+        didSet {
+            guard minimumTickColor != oldValue else { return }
+            
+            self.setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable var minimumTextColor: UIColor = UIColor.white {
+        didSet {
+            guard minimumTextColor != oldValue else { return }
+            
+            self.setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable var minimumFont: UIFont = UIFont.systemFont(ofSize: 14) {
+        didSet {
+            guard minimumFont != oldValue else { return }
+            
+            self.setNeedsDisplay()
         }
     }
     
@@ -71,7 +95,7 @@ open class Scroller: UIControl {
             }
         }
     }
-    @IBInspectable var maximumAngle: CGFloat = 345 {
+    @IBInspectable var maximumAngle: CGFloat = 315 {
         didSet {
             var newVal = min(359, max(0, maximumAngle))
             newVal = max(minimumAngle, maximumAngle)
@@ -79,6 +103,77 @@ open class Scroller: UIControl {
                 self.maximumAngle = newVal
                 self.setNeedsDisplay()
             }
+        }
+    }
+    
+    @IBInspectable var maximumTickColor: UIColor = UIColor.white {
+        didSet {
+            guard maximumTickColor != oldValue else { return }
+            
+            self.setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable var maximumTextColor: UIColor = UIColor.white {
+        didSet {
+            guard maximumTextColor != oldValue else { return }
+            
+            self.setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable var maximumFont: UIFont = UIFont.systemFont(ofSize: 14) {
+        didSet {
+            guard maximumFont != oldValue else { return }
+            
+            self.setNeedsDisplay()
+        }
+    }
+    
+    // MARK: -
+    // MARK: Current value properties
+    @IBInspectable var currentValue: CGFloat = 50 {
+        didSet {
+            guard currentValue != oldValue else { return }
+            
+            if currentValue < minimumValue {
+                currentValue = minimumValue
+            }
+            else if maximumValue < currentValue {
+                currentValue = maximumValue
+            }
+            
+            self.setNeedsDisplay()
+        }
+    }
+    
+    public var currentAngle: CGFloat {
+        var part = self.currentValue - self.minimumValue
+        part = part / (self.maximumValue - self.minimumValue)
+        return self.minimumAngle + part * (self.maximumAngle - self.minimumAngle)
+    }
+    
+    @IBInspectable var currentTickColor: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1) {
+        didSet {
+            guard currentTickColor != oldValue else { return }
+            
+            self.setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable var currentTextColor: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1) {
+        didSet {
+            guard currentTextColor != oldValue else { return }
+            
+            self.setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable var currentFont: UIFont = UIFont.systemFont(ofSize: 14) {
+        didSet {
+            guard currentFont != oldValue else { return }
+            
+            self.setNeedsDisplay()
         }
     }
     
@@ -102,7 +197,7 @@ open class Scroller: UIControl {
         }
     }
     
-    @IBInspectable var ringWidth: CGFloat = 10 {
+    @IBInspectable var ringWidth: CGFloat = 20 {
         didSet {
             let newVal = max(1, ringWidth)
             if oldValue != newVal {
@@ -113,7 +208,7 @@ open class Scroller: UIControl {
     }
     
     // MARK: -
-    public override func draw(_ rect: CGRect) {
+    open override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         self.drawScroller(context)
     }

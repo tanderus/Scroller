@@ -11,6 +11,7 @@
 		28DB6394CC583786E2959488F9722ADC /* Pods-Scroller_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E97AB2E0918302B3F1041E21AEE2D9 /* Pods-Scroller_Example-dummy.m */; };
 		3923071F07CA84F47FF8A1FF5441ED34 /* Scroller-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ECF0F5FC17987A523A7898D68E3B032 /* Scroller-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DC7C6AE975E148DDF567BD7036193E2 /* Scroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937B4D9FB72D19D98D43D7493D48F2AE /* Scroller.swift */; };
+		5143095422638BEF002977A5 /* DrawBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5143095322638BEF002977A5 /* DrawBall.swift */; };
 		687EE83B6AB4766370A90B8DCF98D6FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
 		7A10BED1E6BD8C448125CFCDC5B329C5 /* DrawTicksAndValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F395ED9FD61C81059D0DADE71D10882 /* DrawTicksAndValues.swift */; };
 		844E55A1D7CF51B8D5C8B8C303C86A21 /* DrawRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E649B6C8D05012594DE7300350EB798B /* DrawRing.swift */; };
@@ -36,6 +37,7 @@
 		248A9080D08545A41151ABA108595E2F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3F395ED9FD61C81059D0DADE71D10882 /* DrawTicksAndValues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DrawTicksAndValues.swift; sourceTree = "<group>"; };
 		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5143095322638BEF002977A5 /* DrawBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawBall.swift; sourceTree = "<group>"; };
 		5415C172ED1212C557DD18065EED3E24 /* Pods-Scroller_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Scroller_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5A290EC169B8F6D32F2471FF071D44C0 /* Pods-Scroller_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Scroller_Example-frameworks.sh"; sourceTree = "<group>"; };
 		5FB9B0F8A31A5E1C20A848FA754063CA /* DrawInnerCircle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DrawInnerCircle.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				E649B6C8D05012594DE7300350EB798B /* DrawRing.swift */,
 				3F395ED9FD61C81059D0DADE71D10882 /* DrawTicksAndValues.swift */,
 				5FB9B0F8A31A5E1C20A848FA754063CA /* DrawInnerCircle.swift */,
+				5143095322638BEF002977A5 /* DrawBall.swift */,
 			);
 			name = Internal;
 			path = Scroller/Internal;
@@ -320,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7DFC68AE6BC69A95C51FB1072042DB1 /* DrawInnerCircle.swift in Sources */,
+				5143095422638BEF002977A5 /* DrawBall.swift in Sources */,
 				844E55A1D7CF51B8D5C8B8C303C86A21 /* DrawRing.swift in Sources */,
 				0DE67EFAE3E3577DB92FE1176BCEF7AB /* DrawScroller.swift in Sources */,
 				7A10BED1E6BD8C448125CFCDC5B329C5 /* DrawTicksAndValues.swift in Sources */,

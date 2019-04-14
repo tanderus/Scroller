@@ -13,5 +13,6 @@ extension Scroller {
         self.drawRing(context)
         self.drawTicksAndValues(context)
         self.drawInnerCircle(context)
+        self.drawBallIfNeeded(context)
     }
 }

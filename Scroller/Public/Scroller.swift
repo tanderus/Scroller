@@ -205,6 +205,50 @@ open class Scroller: UIControl {
     }
     
     // MARK: -
+    // MARK: Ball properties
+    @IBInspectable var shouldDrawBall: Bool = true {
+        didSet {
+            guard shouldDrawBall != oldValue else { return }
+            
+            self.setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable var ballDiameter: CGFloat = 30 {
+        didSet {
+            guard ballDiameter != oldValue else { return }
+            
+            ballDiameter = max(1, min(ballDiameter, ringWidth + 10))
+            
+            self.setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable var ballFill: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1) {
+        didSet {
+            guard ballFill != oldValue else { return }
+            
+            self.setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable var ballStroke: UIColor = UIColor.black {
+        didSet {
+            guard ballStroke != oldValue else { return }
+            
+            self.setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable var ballStrokeWidth: CGFloat = 2 {
+        didSet {
+            guard ballStrokeWidth != oldValue else { return }
+            
+            self.setNeedsDisplay()
+        }
+    }
+    
+    // MARK: -
     // MARK: Ring properties
     @IBInspectable var circleToRingSpacing: CGFloat = 2 {
         didSet {
@@ -229,6 +273,7 @@ open class Scroller: UIControl {
             let newVal = max(1, ringWidth)
             if oldValue != newVal {
                 self.ringWidth = newVal
+                self.ballDiameter = (ballDiameter > newVal + 10) ? newVal + 10 : ballDiameter
                 self.setNeedsDisplay()
             }
         }

@@ -18,14 +18,16 @@ extension Scroller {
     }
     
     public func drawTicksAndValues(_ context: CGContext?) {
-        if currentValue != minimumValue {
+        if currentValue != minimumValue || shouldDrawBall {
             drawMinimumValueTick(context)
         }
-        if currentValue != maximumValue {
+        if currentValue != maximumValue || shouldDrawBall {
             drawMaximumValueTick(context)
         }
         
-        drawCurrentValueTick(context)
+        if !shouldDrawBall {
+            drawCurrentValueTick(context)
+        }
     }
     
     private func drawMinimumValueTick(_ context: CGContext?) {

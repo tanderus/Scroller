@@ -39,7 +39,7 @@ extension Scroller {
         
         var inset = self.ringWidth
         inset += self.circleToRingSpacing
-        inset += self.extraTickHeight
+        inset += max(0, self.extraTickHeight, self.ballDiameter - self.ringWidth)
         inset += self.valueLabelSize
         return rect.insetBy(dx: inset, dy: inset)
     }

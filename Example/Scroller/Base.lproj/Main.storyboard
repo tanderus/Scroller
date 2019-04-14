@@ -29,8 +29,9 @@
                                     <constraint firstAttribute="height" constant="300" id="lLw-88-cOD"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="circleToRingSpacing">
-                                        <real key="value" value="6"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldDrawBall" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentValue">
+                                        <real key="value" value="100"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>

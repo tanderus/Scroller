@@ -48,85 +48,87 @@ override func viewDidLoad() {
 
 ## IBInspectable Properties
 
-`@IBInspectable public var circleFill: UIColor = UIColor.white`
+##### Inner circle related:
+
+`public var circleFill: UIColor = UIColor.white`
 
 Fill color of the inner big circle
 
-`@IBInspectable public var circleStroke: UIColor = UIColor.white`
+`public var circleStroke: UIColor = UIColor.white`
 
 Stroke color for him
 
-`@IBInspectable public var circleStrokeWidth: CGFloat = 0`
+`public var circleStrokeWidth: CGFloat = 0`
 
 Stroke width
 
-`@IBInspectable public var minimumValue: CGFloat = 0`
+`public var minimumValue: CGFloat = 0`
 
-The minimum value of the scroller
+##### The minimum value of the scroller
 
-`@IBInspectable public var minimumAngle: CGFloat = 45`
+`public var minimumAngle: CGFloat = 45`
 
 The angle at which the minimum value displayed (in degrees). The starting 0 angle is located at (middleX, bottomY) point.
 
-`@IBInspectable public var minimumTickColor: UIColor = UIColor.white`
+`public var minimumTickColor: UIColor = UIColor.white`
 
 The color for minimum value tick mark
 
-`@IBInspectable public var minimumTickWidth: CGFloat = 2`
+`public var minimumTickWidth: CGFloat = 2`
 
 The thickness of it
 
-`@IBInspectable public var minimumTextColor: UIColor = UIColor.white`
+`public var minimumTextColor: UIColor = UIColor.white`
 
 The color of the value rendered as text
 
-`@IBInspectable public var minimumFont: UIFont = UIFont.systemFont(ofSize: 14)`
+`public var minimumFont: UIFont = UIFont.systemFont(ofSize: 14)`
 
 The font for rendering minimum value as text
 
 
 
-The same goes for the maximum value-related properties:
+##### The same goes for the maximum value-related properties:
 
-`@IBInspectable public var maximumValue: CGFloat = 100`
+`public var maximumValue: CGFloat = 100`
 
-`@IBInspectable public var maximumAngle: CGFloat = 315`
+`public var maximumAngle: CGFloat = 315`
 
-`@IBInspectable public var maximumTickColor: UIColor = UIColor.white`
+`public var maximumTickColor: UIColor = UIColor.white`
 
-`@IBInspectable public var maximumTickWidth: CGFloat = 2`
+`public var maximumTickWidth: CGFloat = 2`
 
-`@IBInspectable public var maximumTextColor: UIColor = UIColor.white`
+`public var maximumTextColor: UIColor = UIColor.white`
 
-`@IBInspectable public var maximumFont: UIFont = UIFont.systemFont(ofSize: 14)`
-
-
-
-And for the current value:
-
-`@IBInspectable public var currentValue: CGFloat = 50`
-
-`@IBInspectable public var currentTickColor: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1)`
-
-`@IBInspectable public var currentTickWidth: CGFloat = 5`   
-
-`@IBInspectable public var currentTextColor: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1)`
-
-`@IBInspectable public var currentFont: UIFont = UIFont.systemFont(ofSize: 14)`
+`public var maximumFont: UIFont = UIFont.systemFont(ofSize: 14)`
 
 
 
-Properties related to the draggable ball:
+##### And for the current value:
 
-`@IBInspectable public var shouldDrawBall: Bool = true`
+`public var currentValue: CGFloat = 50`
+
+`public var currentTickColor: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1)`
+
+`public var currentTickWidth: CGFloat = 5`   
+
+`public var currentTextColor: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1)`
+
+`public var currentFont: UIFont = UIFont.systemFont(ofSize: 14)`
+
+
+
+##### Properties related to the draggable ball:
+
+`public var shouldDrawBall: Bool = true`
 
 If set to 'false', then the tick will be drawn instead and no dragging will be allowed
 
-`@IBInspectable public var ballDiameter: CGFloat = 30`
+`public var ballDiameter: CGFloat = 30`
 
-`@IBInspectable public var ballFill: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1)`
+`public var ballFill: UIColor = UIColor(red: 0, green: 168 / 255.0, blue: 228 / 255.0, alpha: 1)`
 
-`@IBInspectable public var ballStroke: UIColor = UIColor.black`
+`public var ballStroke: UIColor = UIColor.black`
 
 `@IBInspectable public var ballStrokeWidth: CGFloat = 2`
 
@@ -134,13 +136,13 @@ If set to 'false', then the tick will be drawn instead and no dragging will be a
 
 Ring:
 
-`@IBInspectable public var circleToRingSpacing: CGFloat = 2`
+`public var circleToRingSpacing: CGFloat = 2`
 
 Space between inner circle and the outer ring
 
-`@IBInspectable public var ringColor: UIColor = UIColor(red: 122 / 255.0, green: 196 / 255.0, blue: 178 / 255.0, alpha: 0.2)`
+`public var ringColor: UIColor = UIColor(red: 122 / 255.0, green: 196 / 255.0, blue: 178 / 255.0, alpha: 0.2)`
 
-`@IBInspectable public var ringWidth: CGFloat = 20`
+`public var ringWidth: CGFloat = 20`
 
 ## Author
 

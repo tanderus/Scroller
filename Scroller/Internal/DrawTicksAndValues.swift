@@ -13,22 +13,19 @@ extension Scroller {
         return 5
     }
     
-    internal var tickWidth: CGFloat {
-        return 5
-    }
-    
     internal var valueLabelSize: CGFloat {
         return 30
     }
     
     public func drawTicksAndValues(_ context: CGContext?) {
-        drawCurrentValueTick(context)
         if currentValue != minimumValue {
             drawMinimumValueTick(context)
         }
         if currentValue != maximumValue {
             drawMaximumValueTick(context)
         }
+        
+        drawCurrentValueTick(context)
     }
     
     private func drawMinimumValueTick(_ context: CGContext?) {
@@ -36,7 +33,7 @@ extension Scroller {
             , angleDegrees: self.minimumAngle
             , tickValue: self.minimumValue
             , extraHeight: extraTickHeight
-            , tickWidth: self.tickWidth
+            , tickWidth: self.minimumTickWidth
             , tickColor: self.minimumTickColor
             , textColor: self.minimumTextColor
             , textFont: self.minimumFont
@@ -49,7 +46,7 @@ extension Scroller {
             , angleDegrees: self.maximumAngle
             , tickValue: self.maximumValue
             , extraHeight: extraTickHeight
-            , tickWidth: self.tickWidth
+            , tickWidth: self.maximumTickWidth
             , tickColor: self.maximumTickColor
             , textColor: self.maximumTextColor
             , textFont: self.maximumFont
@@ -62,7 +59,7 @@ extension Scroller {
             , angleDegrees: self.currentAngle
             , tickValue: self.currentValue
             , extraHeight: extraTickHeight
-            , tickWidth: self.tickWidth
+            , tickWidth: self.currentTickWidth
             , tickColor: self.currentTickColor
             , textColor: self.currentTextColor
             , textFont: self.currentFont

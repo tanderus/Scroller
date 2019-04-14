@@ -68,6 +68,15 @@ open class Scroller: UIControl {
         }
     }
     
+    @IBInspectable var minimumTickWidth: CGFloat = 2 {
+        didSet {
+            guard minimumTickWidth != oldValue else { return }
+            
+            self.minimumTickWidth = max(1, minimumTickWidth)
+            self.setNeedsDisplay()
+        }
+    }
+    
     @IBInspectable var minimumTextColor: UIColor = UIColor.white {
         didSet {
             guard minimumTextColor != oldValue else { return }
@@ -110,6 +119,15 @@ open class Scroller: UIControl {
         didSet {
             guard maximumTickColor != oldValue else { return }
             
+            self.setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable var maximumTickWidth: CGFloat = 2 {
+        didSet {
+            guard maximumTickWidth != oldValue else { return }
+            
+            self.maximumTickWidth = max(1, maximumTickWidth)
             self.setNeedsDisplay()
         }
     }
@@ -157,6 +175,15 @@ open class Scroller: UIControl {
         didSet {
             guard currentTickColor != oldValue else { return }
             
+            self.setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable var currentTickWidth: CGFloat = 5 {
+        didSet {
+            guard currentTickWidth != oldValue else { return }
+            
+            self.currentTickWidth = max(1, currentTickWidth)
             self.setNeedsDisplay()
         }
     }

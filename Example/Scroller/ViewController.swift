@@ -19,4 +19,3 @@ class ViewController: UIViewController {
         self.valueLabel.text = "Value: \(Int(value))"
     }
 }
-

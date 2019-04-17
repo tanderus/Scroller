@@ -38,7 +38,7 @@ override func viewDidLoad() {
     scroll.translatesAutoresizingMaskIntoConstraints = false
     scroll.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     scroll.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-   	scroll.widthAnchor.constraint(equalToConstant: 300).isActive = true
+    scroll.widthAnchor.constraint(equalToConstant: 300).isActive = true
     scroll.heightAnchor.constraint(equalToConstant: 300).isActive = true
   
     scroll.addTarget(self, action: #selector(scrollerValueChanged), for: .valueChanged)
